@@ -15,7 +15,6 @@ class Ui_Frame(object):
     def setupUi(self, Frame):
         Frame.setObjectName("Frame")
         Frame.resize(1117, 863)
-        
         self.verticalLayout = QtWidgets.QVBoxLayout(Frame)
         self.verticalLayout.setObjectName("verticalLayout")
         self.frame = QtWidgets.QFrame(Frame)
@@ -41,7 +40,7 @@ class Ui_Frame(object):
         font.setBold(True)
         font.setWeight(75)
         self.frame_2.setFont(font)
-        self.frame_2.setStyleSheet("background-color: qlineargradient(spread:repeat, x1:0.701199, y1:1, x2:0.716, y2:0, stop:0 rgba(93, 191, 19, 0.73), stop:1 rgba(255, 255, 255, 255));")
+        self.frame_2.setStyleSheet("background-color: qlineargradient(spread:repeat, x1:0.701199, y1:1, x2:0.716, y2:0, stop:0 rgba(79, 200, 232, 255), stop:1 rgba(255, 255, 255, 255));")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
@@ -214,6 +213,7 @@ class Ui_Frame(object):
         self.label_4.setText(_translate("Frame", "Tên"))
         self.label_8.setText(_translate("Frame", "Giờ"))
         self.label_9.setText(_translate("Frame", "Ngày"))
+
 
 if __name__ == "__main__":
     import sys

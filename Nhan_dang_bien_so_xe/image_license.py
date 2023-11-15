@@ -28,8 +28,8 @@ RESIZED_IMAGE_WIDTH = 20
 RESIZED_IMAGE_HEIGHT = 30
 
 #mô hình KNN
-npaClassifications = np.loadtxt("classificationS.txt", np.float32)
-npaFlattenedImages = np.loadtxt("flattened_images.txt", np.float32)
+npaClassifications = np.loadtxt("LP_Rec_Video/classificationS.txt", np.float32)
+npaFlattenedImages = np.loadtxt("LP_Rec_Video/flattened_images.txt", np.float32)
 npaClassifications = npaClassifications.reshape((npaClassifications.size, 1))
 kNearest = cv2.ml.KNearest_create()
 kNearest.train(npaFlattenedImages, cv2.ml.ROW_SAMPLE, npaClassifications)
@@ -205,13 +205,7 @@ class MainWindow(QtWidgets.QFrame, layout_image.Ui_Frame):
                 break
     def info(self, text):
         in4 = self.let_bienso.text()
-        # in5 = int(in4[0:2])
-        if len(in4) >= 2:
-            in5 = int(in4[0:2])
-        else:
-            # Xử lý trường hợp khi chuỗi không hợp lệ
-            in5 = 0  # hoặc giá trị mặc định khác tùy vào yêu cầu của bạn
-
+        in5 = int(in4[0:2])
         self.let_ten.setText('Võ Quốc Dương')
         lang = {
             11: 'Cao Bằng', 12: 'Lạng Sơn', 14: 'Quảng Ninh', 15: 'Hải Phòng', 17: 'Thái Bình', 18: 'Nam Định',
